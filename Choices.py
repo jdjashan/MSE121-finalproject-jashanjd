@@ -20,10 +20,15 @@ def StartGame():
     print("Make Choices, Get Lucky, Use Some Skill, and Get Out of The Terminal!")
     for i in range (AnimationSpace):
         print(" ")
+    FirstAnim()
 
 def FirstAnim():
     with open("First Anim.txt",'r') as FirstScene:
-        print(FirstScene.readline())
+        LengthLineReading = 5 #StartWithAverage 5Seconds
+        for line in FirstScene:
+            time.sleep(LengthLineReading/12)
+            print(line)
+            LengthLineReading = len(line)
     ProperSelection = False
     while ProperSelection == False:
         Choice = int(input())
@@ -44,7 +49,7 @@ def FirstChoiceMade(Choice):
     elif Choice == 3:
         Storyline = open("StayStill.txt",'r')
     for line in Storyline:
-        ReadLine = Storyline.readline()
+        ReadLine = line
         if ReadLine == "D":
             print()
             #DeathFunc
