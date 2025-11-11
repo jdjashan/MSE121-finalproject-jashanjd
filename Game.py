@@ -1,25 +1,7 @@
-import time
 
-def StartGame():
-    AnimationSpace = 10
-    AnimationTime = 0.5
-    print("Welcome")
-    time.sleep(AnimationTime)
-    print("To")
-    time.sleep(AnimationTime+1)
-    print("(^V^)--1")
-    time.sleep(AnimationTime)
-    print("(@_@)--2")
-    time.sleep(AnimationTime)
-    print("(<_>)--3")
-    time.sleep(AnimationTime)
-    print("(*o*)--4")
-    time.sleep(AnimationTime+2)
-    print("Stuck In The Terminal: A Choose Your Own Adventure Game")
-    time.sleep(AnimationTime)
-    print("Make Choices, Get Lucky, Use Some Skill, and Get Out of The Terminal!")
-    for i in range (AnimationSpace):
-        print(" ")
+import time
+from Choices import StartGame
+
     
 
 def FirstChoice():
@@ -41,7 +23,7 @@ def FirstChoice():
     time.sleep(AnimationTime+3)
     print("You: 'FOREVER. Nuh Uh, not happening. How Do I Leave The Teermiineeeal'")
     time.sleep(AnimationTime)
-    print("Master Jeff: 'Well, to escape the Ter-Min-Al, you can either collect 3 items around the terminal and bring them back to me (Click f + Enter at any choice to look at item list)" )
+    print("Master Jeff: 'Well, to escape the Ter-Min-Al, you can either collect 3 items around the terminal and bring them back to me' (Click f + Enter at any choice to look at item list)" )
     time.sleep(AnimationTime+4)
     print("Master Jeff: 'OR, you can get 10 points by winning games allover, that should instantly teleport you back home" )
     time.sleep(AnimationTime+5)
@@ -67,7 +49,6 @@ def FirstChoice():
 
 def main():
     StartGame()
-    FirstChoice()
 
 
 
