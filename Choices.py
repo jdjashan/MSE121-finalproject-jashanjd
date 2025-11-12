@@ -48,6 +48,7 @@ def FirstChoiceMade(Choice):
         Storyline = open("OppositeJeff.txt",'r')
     elif Choice == 3:
         Storyline = open("StayStill.txt",'r')
+    LengthLineReading = 12 #StartWithAverage 12 Seconds for reading
     for line in Storyline:
         ReadLine = line
         if ReadLine == "D":
@@ -64,9 +65,9 @@ def FirstChoiceMade(Choice):
                 print()
                 #FuncInput
         else: 
-            AnimationTime = 5
-            time.sleep(AnimationTime)
-            print(ReadLine)
+            time.sleep(LengthLineReading/12)
+            print(ReadLine.rstrip('\n'))
+            LengthLineReading = len(line) # Make Reading Length Based on line
 
 
 
