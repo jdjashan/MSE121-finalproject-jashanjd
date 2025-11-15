@@ -68,6 +68,8 @@ def FirstChoiceMade(Choice):
             time.sleep(LengthLineReading/12)
             print(ReadLine.rstrip('\n'))
             LengthLineReading = len(line) # Make Reading Length Based on line
+def RobotFight():
+    
 
 
 
