@@ -47,6 +47,7 @@ def FirstChoice():
     print(" Type 3 to NOT Walk and Let Someone else stumble upon you")
     input()
 
+
 def main():
     StartGame()
     

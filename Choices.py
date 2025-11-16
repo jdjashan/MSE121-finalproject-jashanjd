@@ -1,5 +1,5 @@
 import time
-
+from RobotFight import Rmain
 def StartGame():
     AnimationSpace = 10
     AnimationTime = 0.5
@@ -64,11 +64,12 @@ def FirstChoiceMade(Choice):
             elif Choice == 3:
                 print()
                 #FuncInput
+        elif ReadLine.strip() == "G":
+            Rmain()
         else: 
             time.sleep(LengthLineReading/12)
             print(ReadLine.rstrip('\n'))
             LengthLineReading = len(line) # Make Reading Length Based on line
-def RobotFight():
     
 
 

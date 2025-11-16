@@ -1,0 +1,24 @@
+Ok So Lest me explain something to you
+Here in the Terminal, ANYTHING is possible
+So your now about to fight a big robot, thankfully to make the fight easier, you have some abilities
+Ill explain how they work, and the damage FunctionIt can get confusing so listen carefully.
+So you get the first show, and you can choose out of three (basic, poisin, and chance)
+Firstly, a Normal shot will be done by basically rolling two dice, and you do the multiplication of the two numbers as damage
+So if you get a 3 and a 6 you will do 18 damage
+Poisin rolls four dice, it multiples the first two rolls, and adds the product of the second two
+So if you were to roll the same 3 and 6 twice, you would to 18 + 18 damageThe thing is, your damage is capped at 15, and the rest goes towards the next round as 'poisin'
+You will do your total posin damage divided by 5 ontop of your round damage each round
+Lastly, your chance shot, you get a 1 in 30 chance to guess a number, if you get it, you win instantly, otherwise you DIE 
+be smart! This bot will put up a fight
+You both start with 100.0 health
+Goodluck..
+FIGHTERS,
+TAKE YOUR POSITIONS
+LESS GOOOOOOOOOO
+____    o   ____   _    _  _______
+|       |  |       |    |     |
+|___    |  | ___   |____|     |        
+|       |  |    |  |    |     |
+|       |  |____|  |    |     |
+                               
+...............................        
