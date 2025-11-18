@@ -45,7 +45,11 @@ def calc_damage (dmg1,dmg2):
 def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
     if Type == 1:
         if (Health - Damage - Poisin/5) <=0:
-            return 0
+            if ply_or_robo == "Robot":
+                print(f"Robot Takes {Damage + Poisin/5} damage which is enough to kill him!")
+            else:
+                print(f"Dang you take {Damage + Poisin/5} damage and die...")
+                player_death()
         else: 
             return (Health - Damage - Poisin/5)
     elif Type == 2:
