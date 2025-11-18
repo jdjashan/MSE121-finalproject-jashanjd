@@ -6,11 +6,24 @@ def fight_explaination():
         #Set Original Time
         LengthLineReading = 36
         for line in robo_txt:
-            time.sleep(LengthLineReading/12)
+            time.sleep(LengthLineReading/18)
             print(line.rstrip('\n'))
             LengthLineReading = len(line) # Make Reading Length Based on line             
 def robot_death():
-    print("GoodJob, thats 5 game points right there, and you only need 10 to escape")
+    with open("robot_win.txt","r") as robo_txt:
+        #Set Original Time
+        LengthLineReading = 48
+        for line in robo_txt:
+            time.sleep(LengthLineReading/18)
+            print(line.rstrip('\n'))
+            LengthLineReading = len(line) # Make Reading Length Based on line   
+    choice_made = False
+    while choice_made == False:
+        choice = int(input())
+        if choice == 1 or 2:
+            choice_made = True
+    return choice
+    
 def create_damage_list(Type):
     random1=[]
     random2 = []
@@ -32,7 +45,6 @@ def calc_damage (dmg1,dmg2):
 def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
     if Type == 1:
         if (Health - Damage - Poisin/5) <=0:
-            robot_death()
             return 0
         else: 
             return (Health - Damage - Poisin/5)
@@ -58,7 +70,6 @@ def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
             else:
                 return (Health - Damage - Poisin/5)
     elif Type == 3:
-        robot_death()
         return 0
 def chance_game():
     print("Ok your doing it, taking that chance, goodluck")
@@ -132,7 +143,8 @@ def Rmain():
         #Call Damage Function Player
         PlayerHealth = health_loss(damage_tot,robotype,PlayerHealth,robot_poisin,"Player")
         print(f"You Have {PlayerHealth} health left")
-    robot_death()
+    choice_win = robot_death()
+    return choice_win
     
 def main():
     print("main")

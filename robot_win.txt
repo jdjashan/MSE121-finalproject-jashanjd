@@ -1,0 +1,8 @@
+Ok so you did it, you beat the bot good job. You now have 5 points out of 10 to escape
+Your doing pretty great...
+Now you have another choice to make
+The robot died and dropped a little loot bag, or maybe death bag
+You can choose to check it out or leave it behind
+............................................
+Type 1 to Open the bag
+Type 2 to Leave the bag
