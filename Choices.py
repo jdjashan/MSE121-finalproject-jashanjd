@@ -1,5 +1,7 @@
 import time
 from RobotFight import Rmain
+from game_over import player_death
+from house_game import start_house_game
 def StartGame():
     AnimationSpace = 10
     AnimationTime = 0.5
@@ -26,7 +28,7 @@ def FirstAnim():
     with open("First Anim.txt",'r') as FirstScene:
         LengthLineReading = 5 #StartWithAverage 5Seconds
         for line in FirstScene:
-            time.sleep(LengthLineReading/12)
+            time.sleep(LengthLineReading/18)
             print(line)
             LengthLineReading = len(line)
     ProperSelection = False
@@ -55,24 +57,62 @@ def FirstChoiceMade(Choice):
             print()
             #DeathFunc
         elif ReadLine == "C":
-            if Choice == 1:
+            is_chosen = False
+            choice_opp = input()
+            while is_chosen == False:
+                if choice_opp == "1" or "2" or "3":
+                    choice_opp = int(choice_opp)
+                    is_chosen = True
+            if choice_opp == 1:
                 print()
                 #FuncInput
-            elif Choice == 2:
+            elif choice_opp == 2:
                 print()
                 #FuncInput
-            elif Choice == 3:
+            elif choice_opp == 3:
                 print()
                 #FuncInput
         elif ReadLine.strip() == "G":
-            Rmain()
+            robot_win_choice(Rmain())
         else: 
-            time.sleep(LengthLineReading/12)
+            time.sleep(LengthLineReading/18)
             print(ReadLine.rstrip('\n'))
             LengthLineReading = len(line) # Make Reading Length Based on line
     
 
+def robot_win_choice(choice):
+    if choice == 1:
+        print ("Soooo.... it wasnt a loot bag. It was a bomb, sorry player...")
+        player_death()
+    elif choice == 2:
+        with open("leave_lootbag.txt","r") as lootbag_txt:
+        #Set Original Time
+            LengthLineReading = 36
+            for line in lootbag_txt:
+                time.sleep(LengthLineReading/18)
+                print(line.rstrip('\n'))
+                LengthLineReading = len(line) # Make Reading Length Based on line
+        choice_made = False
+        choice = input()
+        while choice_made == False:   
+            if choice == "1" or "2":         
+                choice = int(choice)
+                choice_made = True
+        enter_house_choice(choice)    
 
+
+
+def enter_house_choice(choice):
+    if choice == 1:
+        start_house_game()
+    elif choice == 2:
+        print("You walk around for a while but it starts getting really cold")
+        time.sleep(3)
+        print("It gets so cold, you stop moving, and boom just like that, you cannot feel your body")
+        time.sleep(3)
+        player_death()
+        
+       
 
 
 
