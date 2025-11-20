@@ -20,7 +20,6 @@ def corr_person(): #Function is used to show user all oppurtunities
         for i in range (len(person_list)-1):
             if person_list[i] == choice_person:
                 person_list.pop(i)
-                print(person_list)
                 break
         if len(person_list) > 1:
             print(" And?, Anyone Else you might be able to be freinds with?")

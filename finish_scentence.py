@@ -50,7 +50,7 @@ def third_scentence(): #Create Function for third Scentence
     meets_criteria = False #Create Variable for meeting the needed criteria for scentence
     while meets_criteria == False:
         word = input("I think life is meant for ______ (must contain l,m,n,o or p):  ")
-        meets_criteria = not check_lmnop(word)
+        meets_criteria = check_lmnop(word)
         if meets_criteria == False:
             print("Make Sure You meat the criteria and try again!")
     print("So Your Scentence is:")

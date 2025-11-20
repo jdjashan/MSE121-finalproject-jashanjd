@@ -19,3 +19,4 @@ Or Ill just point you in the right Direction
 ..............................................
 Type 1 to roll for the escape
 Type 2 to Get `pointed` in the right direction
+S

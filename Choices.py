@@ -4,6 +4,7 @@ from game_over import player_death
 from house_game import start_house_game
 from follow_light import light_game
 from go_people import connect_people
+from StayStill import make_choice
 def StartGame():
     AnimationSpace = 10
     AnimationTime = 0.5
@@ -59,9 +60,8 @@ def FirstChoiceMade(Choice):
     LengthLineReading = 12 #StartWithAverage 12 Seconds for reading
     for line in Storyline:
         ReadLine = line
-        if ReadLine == "D":
-            print()
-            #DeathFunc
+        if ReadLine == "S":
+            make_choice()
         elif ReadLine == "C":
             is_chosen = False
             while is_chosen == False:
