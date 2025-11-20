@@ -1,10 +1,20 @@
 There is a quote by Desmond Tutu, very accurate to the decision you just made
 "Hope is being able to see that there is light despite all of the darkness" 
-You probably made this decision out of hope, out of the glass half full that the light will lead you somewhere Goodbye
+You probably made this decision out of hope, out of the glass half full that the light will lead you somewhere
 so you start walking, ad as you get closer the light gets brighter
 but for some reason your hope gets smaller
 its like the light is a growing fire resting in your soul, burning and eating away at those once hopeful thoughts
 But you make it to the light, and its just one big lightbulb
 But just has you lay your hand on the lught it starts cracking, and soon breaks
 Lightmaster: 'Welcome, to the game of light'
-Lightmaster: 'This game is all about getting a ray of light to travel the furthest, assuming the light has a quadratic bend.
+Lightmaster: 'This game is all about getting a ray of light to travel the furthest, assuming the light has a quadratic bend.'
+Lightmaster: 'The Light Rays follow a projectile motion, and you have to try to change the angle of shot to figure out the distance traveled.'
+Lightmaster: 'If you get a certain amount of distance traveled, you win, and get some points towards escaping'
+Lightmaster: 'If you dont, then im sorry friend I must blast you with light, and you will perish'
+Lightmaster: 'Goodluck, he he'
+You: 'Wha- WTF' 
+START game
+..........
+*Assuming a speed of 100m/s and gravity of 9.8m/s^2
+
+

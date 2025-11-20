@@ -19,9 +19,12 @@ def robot_death():
             LengthLineReading = len(line) # Make Reading Length Based on line   
     choice_made = False
     while choice_made == False:
-        choice = int(input())
-        if choice == 1 or 2:
+        choice = input().strip()
+        if choice == "1" or choice == "2":
             choice_made = True
+            choice = int(choice)
+        else:
+            print("Please Choose a Valid Selection")
     return choice
     
 def create_damage_list(Type):
