@@ -8,7 +8,7 @@ So if you get a 3 and a 6 you will do 18 damage
 Poisin rolls four dice, it multiples the first two rolls, and adds the product of the second two
 So if you were to roll the same 3 and 6 twice, you would to 18 + 18 damageThe thing is, your damage is capped at 15, and the rest goes towards the next round as 'poisin'
 You will do your total posin damage divided by 5 ontop of your round damage each round
-Lastly, your chance shot, you get a 1 in 30 chance to guess a number, if you get it, you win instantly, otherwise you DIE 
+Lastly, your chance shot, you get a 1 in 15 chance to guess a number, if you get it, you win instantly, otherwise you DIE 
 be smart! This bot will put up a fight
 You both start with 100.0 health
 Goodluck..

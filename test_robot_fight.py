@@ -3,6 +3,8 @@ from RobotFight import calc_damage
 from RobotFight import health_loss
 
 
+
+# TESTS FOR FUNCTION DEALING DAMAGE
 def test_damage_one():
     #Test with 3 and 5
     expected_result = 15
@@ -27,6 +29,9 @@ def test_health_loss_two():
     #We must make some assumptions to test, assume health is 100, assume damage is 25(maxed at 15), assume poisin is at 50 right now, place player or Robot, does not matter
     assert health_loss(25,2,100,50,"Robot") == expected_result
 
+
+
+#TESTING RETURN STATEMNTS FOR ROBOT AND PLAYER
 def test_health_loss_robo_death():
     #Test with choice one, no poisin
     # Result should return 0, because dead

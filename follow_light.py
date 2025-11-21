@@ -8,9 +8,18 @@ from finish_scentence import startscentence_game
 def main():
     return
 
+def try_light_max(curr_distance,max_distance):
+    if (curr_distance > max_distance):
+        print(f"The Light reached a distance of {curr_distance} which is a new best!")
+        return curr_distance, curr_distance
+    else:
+        print(f"The Light reached a distance of {curr_distance}")
+        return curr_distance, max_distance
+
+
 def calc_range_height_tot(angle_launch):
-    range_launch = (100*(math.sin(math.radians(2*angle_launch))))/9.8      #Calculate total x and y distance traveled and solve for total distance (using projectile motion!)
-    height_launch = (100*((math.sin(math.radians(angle_launch)))**2))/(2*9.8)
+    range_launch = ((10**2)*(math.sin(2*math.radians(angle_launch))))/9.8      #Calculate total x and y distance traveled and solve for total distance (using projectile motion!)
+    height_launch = ((10**2)*((math.sin(math.radians(angle_launch)))**2))/(2*9.8)
     tot_launch = range_launch + height_launch
     return tot_launch
 def light_game():
@@ -20,10 +29,10 @@ def light_game():
             time.sleep(LengthLineReading/18)
             print(line.rstrip('\n'))
             LengthLineReading = len(line)
-    tries_game = 6 #Allow the user 5 attempts (starting from 1)
 
-    max_distance = 0  # Create variables for distance
-    curr_distance = 0
+    tries_game = 6 #Allow the user 5 attempts (starting from 1)
+    max_distance = 0.0  # Create variables for distance
+    curr_distance = 0.0
 
 
     for i in range (1,tries_game): #Loop Through 5 games
@@ -39,17 +48,16 @@ def light_game():
             else:
                 print("Please enter a valid number")
 
+
         curr_distance = calc_range_height_tot(angle_chosen)
-        if (curr_distance > max_distance):
-            max_distance = curr_distance
-            print(f"The Light reached a distance of {curr_distance} which is a new best!")
-        else:
-            print(f"The Light reached a distance of {curr_distance}")
-    if max_distance > 12.0:
-        print("You beat the distance of 12, congrats thats 5 points!")
+        curr_distance, max_distance = try_light_max(curr_distance, max_distance)
+
+
+    if max_distance > 13.0: #Check Score and either keep player moving along, or end game for player
+        print("You beat the distance of 13, congrats thats 5 points!")
         startscentence_game()
     else:
-        print("You did not beat a distance of 12, sorry thats the game over")
+        print("You did not beat a distance of 13, sorry thats the game over")
         player_death()
 
 

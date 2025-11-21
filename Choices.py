@@ -12,13 +12,15 @@ def StartGame():
     time.sleep(AnimationTime)
     print("To")
     time.sleep(AnimationTime+1)
-    print("(^V^)--1")
+    print("Starting Story...")
     time.sleep(AnimationTime)
-    print("(@_@)--2")
+    print("Teleporting Player...")
     time.sleep(AnimationTime)
-    print("(<_>)--3")
+    print("Finishing Rendering...")
     time.sleep(AnimationTime)
-    print("(*o*)--4")
+    print("Goodluck :)")
+    print(" ")
+    print(" ")
     time.sleep(AnimationTime+2)
     print("Stuck In The Terminal: A Choose Your Own Adventure Game")
     time.sleep(AnimationTime)
@@ -28,7 +30,7 @@ def StartGame():
     FirstAnim()
 
 def FirstAnim():
-    if (input("Click f to skip beggining dialog")) == "f":
+    if (input("Write the words skip and click enter to skip, otherwise just click enter to continue:  ")) == "skip".strip():
         print("Make Selection Now:")
     else: 
         with open("First Anim.txt",'r') as FirstScene:

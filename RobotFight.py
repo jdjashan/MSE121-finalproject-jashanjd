@@ -50,9 +50,10 @@ def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
         if (Health - Damage - Poisin/5) <=0:
             if ply_or_robo == "Robot":
                 print(f"Robot Takes {Damage + Poisin/5} damage which is enough to kill him!")
+                return 0
             else:
                 print(f"Dang you take {Damage + Poisin/5} damage and die...")
-                player_death()
+                return 0
         else: 
             return (Health - Damage - Poisin/5)
     elif Type == 2:
@@ -62,7 +63,7 @@ def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
                     print(f"Robot Takes {15 + Poisin/5} damage which is enough to kill him!")
                 else:
                     print(f"Dang you take {15 + Poisin/5} damage and die...")
-                    player_death()
+                    
                 return 0
             else: 
                 return (Health - 15 - Poisin/5)
@@ -72,7 +73,7 @@ def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
                     print(f"Robot Takes {Damage + Poisin/5} damage which is enough to kill him!")
                 else:
                     print(f"Dang you take {Damage + Poisin/5} damage and die...")
-                    player_death()
+                    
                 return 0
             else:
                 return (Health - Damage - Poisin/5)
@@ -81,20 +82,24 @@ def health_loss(Damage,Type,Health,Poisin,ply_or_robo):
 def chance_game():
     print("Ok your doing it, taking that chance, goodluck")
     time.sleep(3)
-    print(" You have a 1 in 30 chance to guess the random number")
+    print(" You have a 1 in 15 chance to guess the random number")
     time.sleep(3)
     print("Enter Your Guess Down Below...")
     time.sleep(3)
     p_guess = int(input())
-    game_roll = random.randint(1,30)
+    game_roll = random.randint(1,15)
     print(f"The random number is: {game_roll}")
     if p_guess != game_roll:
         print("Ooops those are not equal...")
         player_death()
+    else:
+        print("Wow, you actually got it, congrats player. Sometimes taking chances in life are worth it...")
+        time.sleep(2)
+        
 
 def Rmain():
-    RoboHealth = 50
-    PlayerHealth = 50
+    RoboHealth = 100
+    PlayerHealth = 100
     player_poisin = 0
     robot_poisin = 0
     fight_explaination()
@@ -115,6 +120,7 @@ def Rmain():
         #Create Chance Game for Choice Three
         if type == 3:
             chance_game()
+            break
         # Make Random Lists for Damage
         damage1, damage2 = create_damage_list(type)
 
@@ -150,8 +156,11 @@ def Rmain():
         #Call Damage Function Player
         PlayerHealth = health_loss(damage_tot,robotype,PlayerHealth,robot_poisin,"Player")
         print(f"You Have {PlayerHealth} health left")
-    choice_win = robot_death()
-    return choice_win
+    if PlayerHealth <= 0:
+        player_death
+    else:
+        choice_win = robot_death()
+        return choice_win
     
 def main():
     print("main")

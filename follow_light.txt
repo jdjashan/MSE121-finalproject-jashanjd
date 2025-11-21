@@ -15,6 +15,6 @@ Lightmaster: 'Goodluck, he he'
 You: 'Wha- WTF' 
 START game
 ..........
-*Assuming a speed of 100m/s and gravity of 9.8m/s^2
+*Assuming a speed of 10m/s and gravity of 9.8m/s^2
 
 

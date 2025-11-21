@@ -7,7 +7,7 @@ def main():
     return
 
 
-def check_answer(guess,correct_guess):
+def check_answer(guess,correct_guess): #function that checks answer
     if guess == correct_guess:
         return(1)
     else:
@@ -31,6 +31,7 @@ def riddle_1(points):
             print("Please choose a valid choice!")
     
     points = points + check_answer(choice,2)
+    return points
 
 
 def trivia_2(points):
@@ -54,6 +55,7 @@ def trivia_2(points):
     print("Time is one of the few things in life that’s perfectly fair—what you do with it is what makes the difference.")
     time.sleep(2)
     points = points + check_answer(choice,2)
+    return points
 
 def riddle_3(points):
     print("Master Jeff: 'Riddle Now:")
@@ -74,6 +76,7 @@ def riddle_3(points):
     print("Your “dark parts” aren’t dangerous—they simply grow or shrink depending on how much light you allow into your life.")
     time.sleep(3.5)
     points = points + check_answer(choice,2)
+    return points
 
 
 def start_trivia():
