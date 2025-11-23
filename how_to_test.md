@@ -3,7 +3,6 @@
 
 Pytesting 
 
- 
 
 For pytesting all the logic that returns a value and does not take a user input must be tested. When testing it is necessary to test the boundries of the function. So for example, if a function returns a number from 1 – 90, you would test the function with parameters that return 1, and with parameters that return 90. Testing the boundaries 
 
@@ -60,3 +59,86 @@ To test whole repo with additional info: pytest –verbose
  
 
 To test individual test file: pytest –verbose [file name] 
+
+
+
+
+Manual Testing 
+
+ 
+
+Manual testing for a game such as this can get pretty confusing, with many  different possibilities of user inputs. We will go over all the base win and loss cases, more will be covered later on the test_coverage.md 
+
+ 
+
+*Each input is separated by a double space 
+
+ 
+
+*Enter represents just hitting enter key in keyboard 
+
+ 
+
+Winning inputs: 
+
+ 
+
+Enter  1  1  1  1  1  2  1  1  3  2   ---- (Assuming Player wins Robot Fight and gets all House game questions right) 
+
+ 
+
+Enter 2  1  40  45  50  55  53  family  gold  love  sister  ----(Assuming Player gets the light projectile passed and completes sentence game) 
+
+ 
+
+Enter 2  2  1  2  3  4  5  6  7  ----(Assuming Player chooses all people and wins game) 
+
+ 
+
+Enter 3 1 18 ----(Assuming Player guess correct random number) 
+
+ 
+
+Enter 3 2 1  40  45  50  55  53  family  gold  love  sister  ----(Assuming Player gets the light projectile passed and completes sentence game) 
+
+ 
+
+Enter 3  2  2  2  2  1  2  1  1  3  2  ----(Assuming Player gets every trivia/riddle and then gets every quote interpretation correct) 
+
+ 
+
+Losing Inputs:  
+
+ 
+
+Enter 1  1  1  1 ----(Assuming Player Loses to Robot) 
+
+ 
+
+Enter  1  1  1  1  1  1  1  2  2  3  ----(Assuming Player beats robot but loses to the house game by getting all answers incorrect) 
+
+ 
+
+Enter  2  1  10  15  20  25  30  ----(Player loses the light projectile game) 
+
+ 
+
+ 
+
+Enter  2  3  ----(Player dies to unknown screeching figure) 
+
+ 
+
+Enter  3  1  10  ----(Assuming Player does not guess the number correctly to escape the game) 
+
+ 
+
+Enter  3  2  1  10  15  20  25  30  ----(Player loses light projectile game) 
+
+ 
+
+Enter  3  2  2  1  1  2  ----(Player loses by getting all riddle/trivia wrong) 
+
+ 
+
+Enter  3  2  2  1 2  2  1  1  2  2  3  ----(Player loses by winning light game but then losing house game – quote interpretation getting all wrong) 

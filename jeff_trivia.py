@@ -75,7 +75,7 @@ def riddle_3(points):
             print("Please choose a valid choice!")
     print("Your “dark parts” aren’t dangerous—they simply grow or shrink depending on how much light you allow into your life.")
     time.sleep(3.5)
-    points = points + check_answer(choice,2)
+    points = points + check_answer(choice,1)
     return points
 
 

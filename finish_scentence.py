@@ -38,7 +38,7 @@ def second_scentence(): #Create Function for second Scentence
     meets_criteria = False #Create Variable for meeting the needed criteria for scnentence
     while meets_criteria == False:
         word = input("If I could only live with one item for the rest of my life it would be ________ (Cannot include any of the letters from the first 5 in the alphabet):  ")
-        meets_criteria = check_lmnop(word)
+        meets_criteria = not check_first5(word)
         if meets_criteria == False:
             print("Make Sure You meat the criteria and try again!")
     print("So Your Scentence is:")

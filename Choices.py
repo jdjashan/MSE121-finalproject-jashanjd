@@ -63,8 +63,10 @@ def FirstChoiceMade(Choice):
     for line in Storyline:
         ReadLine = line
         if ReadLine == "S":
+            Storyline.close()
             make_choice()
         elif ReadLine == "C":
+            Storyline.close()
             is_chosen = False
             while is_chosen == False:
                 choice_opp = input()
@@ -75,9 +77,12 @@ def FirstChoiceMade(Choice):
                     print("Choose a valid option please")
             if choice_opp == 1:
                 light_game()
+                Storyline.close()
             elif choice_opp == 2:
+                Storyline.close()
                 connect_people()
             elif choice_opp == 3:
+                Storyline.close()               
                 print("Probably not the best idea, screaming into a void of nothingness, hoping for some result")
                 time.sleep(3)
                 print("Those sounds of people are gone, but you hear a loud screeching noise approaching you")
@@ -89,6 +94,7 @@ def FirstChoiceMade(Choice):
                 player_death()
                 
         elif ReadLine.strip() == "G":
+            Storyline.close()
             robot_win_choice(Rmain())
         else: 
             time.sleep(LengthLineReading/18)
