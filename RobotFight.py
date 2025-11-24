@@ -157,7 +157,7 @@ def Rmain():
         PlayerHealth = health_loss(damage_tot,robotype,PlayerHealth,robot_poisin,"Player")
         print(f"You Have {PlayerHealth} health left")
     if PlayerHealth <= 0:
-        player_death
+        player_death()
     else:
         choice_win = robot_death()
         return choice_win

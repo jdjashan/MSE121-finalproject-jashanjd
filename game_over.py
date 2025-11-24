@@ -17,7 +17,7 @@ def player_death():
         time.sleep(time_read)
         print("Some people are so afraid to die that they never begin to live. - Henry Van Dyke")
         time.sleep(time_read)
-        print(f"{name} Atleast you went out trying to escape the terminal, you were a nobel one")
+        print(f"{name}, Atleast you went out trying to escape the terminal, you were a nobel one")
         time.sleep(time_read)
         print(f"Master Jeff: 'I Salute You {name}, you did your best")
         time.sleep(time_read - 2)
