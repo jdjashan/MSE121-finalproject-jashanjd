@@ -6,11 +6,20 @@ def main():
     return
 
 def check_list(list,choice_person): #Function to check list and remove choice if found
-    for i in range (len(list)-1):
-        if list[i] == choice_person:
-            list.pop(i)
+    if len(list) == 1:
+        if list[0] == choice_person:
+            list.pop(0)
             return list
-    return list
+        else:
+            return list
+    else:
+        for i in range (len(list)-1):
+            if list[i] == choice_person:
+                list.pop(i)
+                return list
+
+
+        return list
     
 
 
