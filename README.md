@@ -7,7 +7,7 @@ Created to be a Choose Your own Adventure game that can teach the user some life
 - implements all fundamnetals of python
 - Attempts to demonstrate test driven development using pytest
 - snake_case and proper coding ettiquite followed
-- Go to [instructions.md](url) for more info on how to play
+- Go to [instructions.md]([url](https://github.com/jdjashan/MSE121-finalproject-jashanjd/blob/main/instructions.md)) for more info on how to play
 - Enjoy the Game!
 -------------------------------------------------------------------------------------
 
