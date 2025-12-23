@@ -1,3 +1,6 @@
+
+STUCK IN THE TERMINAL - A CHOOSE YOUR OWN ADVENTURE GAME
+
 This is a final project created by a student in Management Engineering at Waterloo. 
 Created to be a Choose Your own Adventure game that can teach the user some life lessons, and keep them engaged with different minigames and interesting twsists!
 
